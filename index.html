@@ -1227,8 +1227,8 @@ window.addEventListener("scroll", function() {
     <div id="Header" class="header">
         <!--img src="https://github.com/sz-games/sz-games.github.io/blob/main/Gh.png?raw=true" style="position: relative; width: 150px; height: 150px;" alt="img"-->
         <img src="https://github.com/sz-games/home/blob/main/G.png?raw=true"  fetchpriority="low" style="position: relative; width: 150px; height: 150px;" alt="Sz Games">
-        <h1>Sz Games</h1>
-        <p style="display: none; font-size: 20px;">By Bobby</p>
+        <h1>Pamplemouche Fusion</h1>
+        <p style="display: none; font-size: 20px;">By Pamplemouche Tech</p>
         
 <style>
   .featgameit {
@@ -2042,7 +2042,11 @@ style=" height: 40px; box-shadow: 0px 0px 8px #000000; font-size: 15px; color: w
   }
 </style>
 
-
+<script>
+  let gameUrl = "https://poki.com/fr/g/wheat-farming";
+let encodedGameUrl = encodeURIComponent(gameUrl);
+let link = `https://pm-games.github.io/PamplemoucheFusion/game.html?game=${encodedGameUrl}`;
+</script>
 <div class="box"  id="Monkey Mart" category="Casual" style="position: relative; float: left;">
   <a href="https://pm-games.github.io/PamplemoucheFusion/game.html?game=https://sz-games.github.io/Games/monkey-mart">
     
@@ -2053,7 +2057,7 @@ style=" height: 40px; box-shadow: 0px 0px 8px #000000; font-size: 15px; color: w
 
 </div>
 <div class="box" id="Wheat Farming" category="Farm" style="position: relative; float: left;">
-  <a href="https://pm-games.github.io/PamplemoucheFusion/game.html?game=https://poki.com/fr/g/wheat-farming">
+  <a href="https://pm-games.github.io/PamplemoucheFusion/game.html?game=${encodedGameUrl}">
 
     <img class="ImageForGame" data-src="images/IMG_0361.jpeg" alt="game">
   <div class="textover" style="width: 90%; border-radius: 15px; background-color: #191919db; top: 15% !important; color: rgba(255, 255, 255, 0.827) !important; color: rgb(255, 255, 255) !important;">Wheat Farming</div>
