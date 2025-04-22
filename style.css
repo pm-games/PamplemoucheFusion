@@ -1,9 +1,14 @@
-.iAmName {
-  align-item: center;
-}
-.iAmSurname {
-  align-item: center;
-}
-.apButton bigger gold ap_popup {
-  align-item: center;
-}
+body {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
