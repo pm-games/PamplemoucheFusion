@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <script
+    document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const fileInput = document.getElementById('imageInput');
+    const file = fileInput.files[0];
+    if (!file) {
+        alert("Veuillez sélectionner une image !");
+        return;
+    }
+
+    // Lire le contenu de l'image en base64
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = async () => {
+        const base64Image = reader.result.split(',')[1]; // Exclure le préfixe "data:image/..."
+
+        // Configurer les informations pour l'API GitHub
+        const repoOwner = "pm-games";
+        const repoName = "PamplemoucheFusion";
+        const filePath = `images/${file.name}`; // Chemin dans le dépôt
+        const branch = "main"; // Branche cible
+        const githubToken = "VOTRE_TOKEN_PERSONNEL"; // Remplacez par votre token GitHub
+
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
+
+        const message = `Ajout de l'image ${file.name}`;
+        const body = {
+            message: message,
+            content: base64Image,
+            branch: branch,
+        };
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `Bearer ${githubToken}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(body),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('statusMessage').innerText =
+                    `Image téléversée avec succès : ${data.content.html_url}`;
+            } else {
+                const error = await response.json();
+                document.getElementById('statusMessage').innerText =
+                    `Erreur : ${error.message}`;
+            }
+        } catch (error) {
+            console.error("Erreur :", error);
+            document.getElementById('statusMessage').innerText = "Échec du téléversement.";
+        }
+    };
+});
+  </body>
+</html>
