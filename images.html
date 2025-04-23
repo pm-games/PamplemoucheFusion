@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <input type="image" placeholder="AjouteUneImage">
+
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload d'image vers GitHub</title>
+</head>
+<body>
+    <h1>Uploader une image vers le dépôt GitHub</h1>
+    <form id="uploadForm">
+        <label for="imageInput">Sélectionnez une image :</label>
+        <input type="file" id="imageInput" accept="image/*" required>
+        <button type="submit">Téléverser</button>
+    </form>
+    <p id="statusMessage"></p>
     <script>
     document.getElementById('uploadForm').addEventListener('submit', async (event) => {
     event.preventDefault();
