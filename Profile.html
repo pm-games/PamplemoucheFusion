@@ -37,6 +37,10 @@
             border-radius: 5px;
             transition: background 0.3s ease;
         }
+      img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
     </style>
 
@@ -52,6 +56,15 @@
 </style>
     <h1>Profil</h1>
     <span id="ap_welcome"></span>
+     <script>
+  if (login === 'Admin') {
+      document.body.innerHTML += '<img src="Profile/IMG_0361.jpg" alt="Admin Image" style="width:200px;height:auto;">';
+  } else if (login === 'PokileproYTBE') {
+      document.body.innerHTML += '<img src="user_image_url.jpg" alt="User Image" style="width:200px;height:auto;">';
+  } else {
+      document.body.innerHTML += '<img src="default_image_url.jpg" alt="Default Image" style="width:200px;height:auto;">';
+  }
+</script>
 <script type="text/javascript">
   var ap_welcome="Hello, you're logged in as: " + login;
   ap_welcome+=" [<a href='https://www.authpro.com/auth/PmGames/?action=logout'>Logout</a>]";
@@ -60,15 +73,6 @@
 </script>
     <a href="https://www.authpro.com/auth/PmGames/?action=edit2&auth=pp">Edit profile</a>
 <script type="text/javascript" src="https://www.authpro.com/auth/PmGames/?action=members_online_count">
-</script>
- <script>
-  if (login === 'Admin') {
-      document.body.innerHTML += '<img src="Profile/IMG_0361.jpg" alt="Admin Image" style="width:200px;height:auto;">';
-  } else if (login === 'PokileproYTBE') {
-      document.body.innerHTML += '<img src="user_image_url.jpg" alt="User Image" style="width:200px;height:auto;">';
-  } else {
-      document.body.innerHTML += '<img src="default_image_url.jpg" alt="Default Image" style="width:200px;height:auto;">';
-  }
 </script>
     <a href="https://www.authpro.com/auth/PmGames/?action=member_profile"></a>
     <footer>
