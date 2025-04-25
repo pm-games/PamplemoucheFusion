@@ -57,13 +57,22 @@
     <h1>Profil</h1>
          <script>
   if (login === 'Admin') {
-      document.body.innerHTML += '<img src="Profile/IMG_0361.jpg" alt="Admin Image" style="width:200px;height:auto;">';
+      document.body.innerHTML += '<img src="Profile/IMG_0361.jpg" alt="Admin Image" class="iii" style="width:200px;height:auto;">';
   } else if (login === 'PokileproYTBE') {
       document.body.innerHTML += '<img src="user_image_url.jpg" alt="User Image" style="width:200px;height:auto;">';
   } else {
       document.body.innerHTML += '<img src="default_image_url.jpg" alt="Default Image" style="width:200px;height:auto;">';
   }
 </script>
+    <style>
+  .iii {
+    width: 150px; /* Ajustez la taille selon vos besoins */
+    height: 150px; /* La hauteur doit être égale à la largeur pour un cercle parfait */
+    border-radius: 50%; /* Rend l'image circulaire */
+    object-fit: cover; /* Assure que l'image s'adapte bien dans le cercle */
+    border: 2px solid #ccc; /* Optionnel : ajoute une bordure */
+  }
+</style>
     <span id="ap_welcome"></span>
 
 <script type="text/javascript">
