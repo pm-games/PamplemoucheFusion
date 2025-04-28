@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Profile</title>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -10,118 +12,45 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
         }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .profile-container {
+            width: 300px;
+            height: 200px;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding-top: 50px;
+            text-align: center;
         }
 
-        #ap_welcome {
-            margin-bottom: 20px;
+        .profile-container img {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+        }
+
+        .profile-container .username {
+            margin-top: 20px;
             font-size: 1.2rem;
+            color: #232323;
         }
-
-        footer {
-            margin-top: 30px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-      img {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-
     </style>
-
-  </head>
-  <body>
- <meta http-equiv="Expires" content="-1">
-<meta http-equiv="Pragma" content="no-cache">
-<meta name="robots" content="noarchive">
-<meta name="robots" content="noindex">
-<noscript>
-<meta http-equiv="refresh" content="0;URL=https://www.authpro.com/auth/PmGames/?action=ppfail">
-</noscript>
-<script type="text/javascript">
-document.write('<scr'+'ipt type="text/javascript" src="https://www.authpro.com/auth/PmGames/?action=pp&rand='+Math.random().toString()+'"></sc'+'ript>');
-</script>
-</script>
-        <style>
-  iframe[src*="authpro.com"] {
-    display: none !important;
-  }
-</style>
-    <h1>Profil</h1>
-    <div class="profileCard">
-         <script>
-  if (login === 'Admin') {
-      document.body.innerHTML += '<img src="Profile/IMG_0361.jpg" alt="Admin Image" class="iii" style="width:200px;height:auto;">';
-  } else if (login === 'PokileproYTBE') {
-      document.body.innerHTML += '<img src="user_image_url.jpg" alt="PokileproYTBE Image" class="iii" style="width:200px;height:auto;">';
-  } else {
-      document.body.innerHTML += '<img src="default_image_url.jpg" alt="Default Image" class="iii" style="width:200px;height:auto;">';
-  }
-</script>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="votre_image_de_profil.jpg" alt="Image de profil">
+        <div class="username">Nom d'utilisateur</div>
     </div>
-    <style>
-  .iii {
-    width: 150px; /* Ajustez la taille selon vos besoins */
-    height: 150px; /* La hauteur doit être égale à la largeur pour un cercle parfait */
-    border-radius: 50%; /* Rend l'image circulaire */
-    object-fit: cover; /* Assure que l'image s'adapte bien dans le cercle */
-    border: 2px solid #ccc; /* Optionnel : ajoute une bordure */
-  }
-      .profileCard {
-  width: 300px;
-  height: 150px;
-  border-radius: 15px;
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden; /* Important pour cacher les débordements */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-      .iii {
-  position: absolute;
-  top: -30px; /* Fait dépasser l'image en haut */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.iii img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; /* Rend l'image ronde */
-  border: 3px solid white; /* Ajoute un contour blanc */
-}
-</style>
-    <span id="ap_welcome"></span>
-
-<script type="text/javascript">
-  var ap_welcome="Hello, you're logged in as: " + login;
-  ap_welcome+=" [<a href='https://www.authpro.com/auth/PmGames/?action=logout'>Logout</a>]";
-  if (exp_days!='') { ap_welcome+=" (your account will be expired in " + exp_days + " days)"; }
-  document.getElementById("ap_welcome").innerHTML = ap_welcome;
-</script>
-    <a href="https://www.authpro.com/auth/PmGames/?action=edit2&auth=pp">Edit profile</a>
-<script type="text/javascript" src="https://www.authpro.com/auth/PmGames/?action=members_online_count">
-</script>
-    <a href="https://www.authpro.com/auth/PmGames/?action=member_profile"></a>
-    <footer>
-    <a href="home.html" style="bottom: 20px"><h2>Retourner Jouer</h2></a>
-    </footer>
-  </body>
+</body>
 </html>
