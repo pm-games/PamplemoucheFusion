@@ -6,6 +6,7 @@ body {
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: ffff03;
         }
 button {
             margin-top: 20px;
