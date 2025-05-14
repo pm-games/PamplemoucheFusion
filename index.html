@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Style pour la barre de navigation */
+      nav {
+        background-color: #001f3f; /* Bleu foncé */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        border-radius: 10%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      nav img {
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 10%;
+      }
+      nav h1 {
+        color: white;
+        font-family: 'Montserrat', Arial, sans-serif;
+        margin: 0;
+      }
+      nav .auth-buttons {
+        display: flex;
+        gap: 0; /* Aucun espace entre les boutons */
+        margin-right: 5px; /* Espace de 5px entre la barre et le premier bouton */
+      }
+      nav .auth-buttons button {
+        background-color: #0074D9; /* Bleu lumineux */
+        color: white;
+        border: none;
+        padding: 5px 20px; /* Espace de 5px en haut et en bas */
+        border-radius: 10%;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      nav .auth-buttons button:hover {
+        background-color: #0056A3; /* Bleu plus foncé */
+      }
+    </style>
   </head>
   <body>
-    <div style="display: flex; flex-direction: column;">
-    
-<h1 class="iAmName">Pamplemouche Fusion</h1>
-<h2 class="iAmSurname">nécessite une connexion</h2>
-<script src="https://www.authpro.com/js/auth.js"></script>
-<script>
-  var ap=new AuthPro('PmGames');
-</script>
-<button class="apButton bigger gold ap_popup" data-action="login">Se connecter</button>
-<button class="apButton bigger gold ap_popup" data-action="reg">Créer un Compte</button>
+    <!-- Barre de navigation -->
+    <nav>
+      <div style="display: flex; align-items: center;">
+        <img src="images/IMG_0361.jpeg" alt="Logo">
+        <h1>Pamplemouche Fusion</h1>
+      </div>
+      <div class="auth-buttons">
+        <button class="apButton bigger gold ap_popup" data-action="login">Se connecter</button>
+        <button class="apButton bigger gold ap_popup" data-action="reg">Créer un Compte</button>
+      </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div style="margin-top: 80px; text-align: center;">
+      <h2 class="iAmSurname">Nécessite une connexion</h2>
+      <script src="https://www.authpro.com/js/auth.js"></script>
+      <script>
+        var ap = new AuthPro('PmGames');
+      </script>
+      <button class="apButton bigger gold ap_popup" data-action="login">Se connecter</button>
+      <button class="apButton bigger gold ap_popup" data-action="reg">Créer un Compte</button>
     </div>
   </body>
 </html>
