@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 body {
             display: flex;
             text-align: center;
@@ -5,8 +6,9 @@ body {
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: ffff03;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #6e7f80; /* gris-bleu */
+            color: #000000; /* noir */
         }
 button {
             margin-top: 20px;
