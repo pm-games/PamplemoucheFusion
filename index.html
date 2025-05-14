@@ -9,8 +9,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 5px;
-        border-radius: 10%;
+        padding: 10px 20px; /* Espacement interne */
+        border-radius: 15px; /* Coins arrondis */
         position: fixed;
         top: 0;
         width: 100%;
@@ -19,7 +19,7 @@
       nav img {
         height: 50px;
         margin-right: 10px;
-        border-radius: 10%;
+        border-radius: 15px; /* Coins arrondis pour l'image */
       }
       nav h1 {
         color: white;
@@ -28,15 +28,15 @@
       }
       nav .auth-buttons {
         display: flex;
-        gap: 0; /* Aucun espace entre les boutons */
+        gap: 10px; /* Espacement entre les boutons */
         margin-right: 5px; /* Espace de 5px entre la barre et le premier bouton */
       }
       nav .auth-buttons button {
         background-color: #0074D9; /* Bleu lumineux */
         color: white;
         border: none;
-        padding: 5px 20px; /* Espace de 5px en haut et en bas */
-        border-radius: 10%;
+        padding: 10px 20px; /* Espacement interne */
+        border-radius: 15px; /* Coins arrondis */
         cursor: pointer;
         font-size: 16px;
       }
@@ -65,8 +65,6 @@
       <script>
         var ap = new AuthPro('PmGames');
       </script>
-      <button class="apButton bigger gold ap_popup" data-action="login">Se connecter</button>
-      <button class="apButton bigger gold ap_popup" data-action="reg">Créer un Compte</button>
     </div>
   </body>
 </html>
